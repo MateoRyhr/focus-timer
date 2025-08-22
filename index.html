@@ -11,9 +11,15 @@
     <div class="container">
         <h1><i class="fa-solid fa-clock"></i> Focus Timer</h1>
         
-        <!-- Timer Display -->
-        <div class="timer-display">
-            <span id="minutes">25</span>:<span id="seconds">00</span>
+        <!-- Timer Display with Progress Ring -->
+        <div class="timer-container">
+            <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-ring__circle" stroke="rgba(255,255,255,0.2)" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
+                <circle class="progress-ring__progress" stroke="white" stroke-width="8" fill="transparent" r="90" cx="100" cy="100" transform="rotate(-90 100 100)"/>
+            </svg>
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
         </div>
         
         <!-- Controls -->
@@ -21,6 +27,24 @@
             <button id="startBtn"><i class="fa-solid fa-play"></i> Start</button>
             <button id="pauseBtn"><i class="fa-solid fa-pause"></i> Pause</button>
             <button id="resetBtn"><i class="fa-solid fa-rotate"></i> Reset</button>
+        </div>
+        
+        <!-- Settings -->
+        <div class="settings">
+            <div class="setting-item">
+                <label for="workDuration">Work (min):</label>
+                <input type="number" id="workDuration" min="1" max="60" value="25">
+            </div>
+            <div class="setting-item">
+                <label for="breakDuration">Break (min):</label>
+                <input type="number" id="breakDuration" min="1" max="30" value="5">
+            </div>
+            <div class="setting-item">
+                <label for="darkModeToggle">Dark Mode:</label>
+                <button id="darkModeToggle" class="toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
         </div>
         
         <!-- Sound Selector -->
