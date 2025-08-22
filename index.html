@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer - Nature Sounds</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-clock"></i> Focus Timer</h1>
+        
+        <!-- Timer Display -->
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button id="startBtn"><i class="fa-solid fa-play"></i> Start</button>
+            <button id="pauseBtn"><i class="fa-solid fa-pause"></i> Pause</button>
+            <button id="resetBtn"><i class="fa-solid fa-rotate"></i> Reset</button>
+        </div>
+        
+        <!-- Sound Selector -->
+        <div class="sound-selector">
+            <label><i class="fa-solid fa-music"></i> Nature Sound:</label>
+            <select id="soundSelect">
+                <option value="none">None</option>
+                <option value="rain">Rain</option>
+                <option value="forest">Forest</option>
+                <option value="waves">Ocean Waves</option>
+            </select>
+        </div>
+        
+        <!-- Dashboard -->
+        <div class="dashboard">
+            <h2><i class="fa-solid fa-chart-line"></i> Today's Progress</h2>
+            <p>Sessions: <span id="sessions">0</span></p>
+            <p>Focus Time: <span id="focusTime">0</span> min</p>
+        </div>
+    </div>
+    
+    <!-- Audio Player -->
+    <audio id="natureSound" loop></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
